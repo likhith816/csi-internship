@@ -268,6 +268,8 @@ When the email reaches **Person B**, the entire process is **reversed**:
 - Headers are removed layer by layer
 - The email is **decrypted** and **displayed** in Person B's email client
 
+![OSI Model with Encapsulation and De-encapsulation](images/OSI-Model.gif)
+
 ---
 
 ## Protocols Used in Each OSI Layer
