@@ -1,11 +1,15 @@
-layers in OSI Mode# OSI Model – Layers of OSI Model  
-**Last Updated:** 22 May, 2025
+## OSI Model – Layers of OSI Model  
 
----
 
 ## What is the OSI Model?
+---
+The OSI (Open Systems Interconnection) Model is a conceptual framework used to understand and standardize network communication.
+Developed by the ISO (International Organization for Standardization), it divides networking into seven layers.
+Each layer has specific functions and interacts with the layers directly above and below it.
+The OSI Model ensures interoperability between different systems and protocols.
+It helps in troubleshooting by isolating network issues within specific layers.
 
-The **OSI (Open Systems Interconnection)** Model is a conceptual framework developed by the **International Organization for Standardization (ISO)**. It describes how data travels from one computer to another over a network, breaking this communication into 7 distinct layers. Each layer has its own functions and protocols, making troubleshooting, implementation, and understanding of network communication easier.
+The seven layers are: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
 
 ---
 
@@ -25,7 +29,11 @@ There are **7 layers** in the OSI Model:
 
 ## Layer 1: Physical Layer
 
-The lowest layer of the OSI model. Responsible for the **actual physical connection** between devices.
+It deals with the physical connection between devices, including cables, switches, and electrical signals.
+
+This layer transmits raw binary data (0s and 1s) over the communication medium.
+It defines hardware specifications, such as voltage levels, pin layout, and data rate.
+Examples include Ethernet cables, fiber optics, and radio frequencies (Wi-Fi, Bluetooth).
 
 ### Functions:
 - **Bit Synchronization**
@@ -40,6 +48,11 @@ The lowest layer of the OSI model. Responsible for the **actual physical connect
 ## Layer 2: Data Link Layer (DLL)
 
 Responsible for **node-to-node delivery** of data and handles **error detection**.
+It packages raw bits from the Physical Layer into frames for error-free transmission.
+This layer handles error detection, correction, and flow control.
+It uses MAC (Media Access Control) addresses to identify devices on the same network.
+
+Examples of protocols include Ethernet, PPP (Point-to-Point Protocol), and HDLC.
 
 ### Sublayers:
 - **LLC (Logical Link Control)**
@@ -60,6 +73,8 @@ Responsible for **node-to-node delivery** of data and handles **error detection*
 
 Transmits data between different networks and handles **routing** and **logical addressing (IP)**.
 
+It determines the best path (routing) for data to travel from source to destination.This layer uses logical addressing, such as IP addresses, to identify devices globally.It also handles packet forwarding, fragmentation, and congestion control.Common protocols include IP (IPv4/IPv6), ICMP, and ARP.
+
 ### Functions:
 - **Routing** (path selection)
 - **Logical Addressing** (IP address assignment)
@@ -71,6 +86,8 @@ Transmits data between different networks and handles **routing** and **logical 
 ## Layer 4: Transport Layer
 
 Ensures **end-to-end delivery**, segmentation, and error checking. It works between application and network layers.
+
+It manages end-to-end communication, data segmentation, and reassembly.This layer provides flow control, error checking, and retransmission if necessary.It supports both connection-oriented (TCP) and connectionless (UDP) communication.Protocols include TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
 
 ### Protocols: 
 - **TCP**
@@ -91,6 +108,12 @@ Ensures **end-to-end delivery**, segmentation, and error checking. It works betw
 
 Manages **establishing, maintaining, and terminating sessions** between applications.
 
+It establishes, maintains, and terminates communication sessions between applications.
+This layer handles session synchronization, authentication, and recovery.
+It ensures that data is properly organized and exchanged during long communications.
+
+Examples include NetBIOS, RPC (Remote Procedure Call), and SQL sessions.
+
 ### Protocols: 
 - **NetBIOS**, **PPTP**, **RPC**
 
@@ -104,6 +127,12 @@ Manages **establishing, maintaining, and terminating sessions** between applicat
 ## Layer 6: Presentation Layer
 
 Responsible for **data translation, encryption, and compression**.
+
+It ensures that data is in a readable and understandable format for both sender and receiver.
+This layer handles data encryption, decryption, compression, and conversion (e.g., EBCDIC to ASCII).
+It acts as a translator and formatter for network data.
+
+Examples include SSL/TLS, JPEG, MPEG, and GIF formats.
 
 ### Protocols/Standards: 
 - **TLS/SSL**, **JPEG**, **MPEG**, **GIF**, **MIME**
@@ -119,6 +148,11 @@ Responsible for **data translation, encryption, and compression**.
 
 Provides **network services directly to user applications**.
 
+It provides network services to end-user applications like web browsers, email clients, and file transfer tools.
+This layer enables functions such as email, file sharing, remote login, and web browsing.
+It supports protocols that allow users to access network resources.
+Common protocols include HTTP, HTTPS, FTP, SMTP, and DNS.
+
 ### Protocols:
 - **FTP**, **SMTP**, **DNS**, **DHCP**
 
@@ -130,16 +164,37 @@ Provides **network services directly to user applications**.
 
 ---
 
-## How Data Flows Through the OSI Model
+# How Data Flows in the OSI Model
 
-### Sender Side (Top to Bottom):
-1. **Application Layer:** User interacts with application.
-2. **Presentation Layer:** Data is formatted and encrypted.
-3. **Session Layer:** Connection/session is managed.
-4. **Transport Layer:** Data is segmented and sequenced.
-5. **Network Layer:** Packets are routed using IP.
-6. **Data Link Layer:** Packets are framed and MAC addressed.
-7. **Physical Layer:** Transmits raw bits over a medium.
+When we transfer information from one device to another, it travels through the **7 layers** of the OSI model.  
+First, data travels **down** through the 7 layers from the sender's end and then climbs back **up** 7 layers on the receiver's end.
+
+Data flows through the OSI model in a step-by-step process:
+
+1. **Application Layer:**  
+   Applications create the data.
+
+2. **Presentation Layer:**  
+   Data is formatted and encrypted.
+
+3. **Session Layer:**  
+   Connections are established and managed.
+
+4. **Transport Layer:**  
+   Data is broken into segments for reliable delivery.
+
+5. **Network Layer:**  
+   Segments are packaged into packets and routed.
+
+6. **Data Link Layer:**  
+   Packets are framed and sent to the next device.
+
+7. **Physical Layer:**  
+   Frames are converted into bits and transmitted physically.
+
+Each layer adds specific information to ensure the data reaches its destination correctly,  
+and these steps are reversed upon arrival at the receiver.
+
 
 ### Receiver Side (Bottom to Top):
 - Each layer reverses the process until the user gets the final data.
