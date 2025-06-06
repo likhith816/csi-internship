@@ -195,21 +195,78 @@ Data flows through the OSI model in a step-by-step process:
 Each layer adds specific information to ensure the data reaches its destination correctly,  
 and these steps are reversed upon arrival at the receiver.
 
+![OSI Model with Encapsulation and De-encapsulation](images/image.png)
+
 
 ### Receiver Side (Bottom to Top):
 - Each layer reverses the process until the user gets the final data.
 
 ---
 
-## Example: Sending an Email
+# OSI Model Data Flow Example
 
-1. **Application Layer:** Gmail app composes email.
-2. **Presentation Layer:** Data is encrypted and formatted.
-3. **Session Layer:** A connection is created to the receiver.
-4. **Transport Layer:** Data is broken into segments, sequenced.
-5. **Network Layer:** Packets routed to destination IP.
-6. **Data Link Layer:** Frames created, MAC address added.
-7. **Physical Layer:** Transmitted over cable/WiFi.
+We can understand how data flows through the OSI Model with the help of the example below.
+
+Let us suppose, **Person A sends an e-mail** to his friend **Person B**.
+
+---
+
+## Step-by-Step Breakdown
+
+### Step 1: Application Layer (Layer 7)
+Person A interacts with an email application like **Gmail**, **Outlook**, etc., and writes his email to send.  
+> This happens at the **Application Layer**.
+
+---
+
+### Step 2: Presentation Layer (Layer 6)
+The mail application **prepares the data for transmission** by **encrypting** and **formatting** it.
+
+---
+
+### Step 3: Session Layer (Layer 5)
+A **session (connection)** is established between Person A and Person B over the internet.
+
+---
+
+### Step 4: Transport Layer (Layer 4)
+The email data is **broken into smaller segments**.  
+Each segment includes:
+- **Sequence numbers**
+- **Error-checking information**
+
+This ensures **reliability** during transmission.
+
+---
+
+### Step 5: Network Layer (Layer 3)
+At this layer:
+- **Logical addressing** (e.g., IP addresses) is added.
+- It determines the **best route** to transfer the data.
+
+---
+
+### Step 6: Data Link Layer (Layer 2)
+Here, the data is:
+- **Encapsulated into frames**
+- **MAC addresses** are added for local device identification
+- **Error detection** mechanisms are applied
+
+---
+
+### Step 7: Physical Layer (Layer 1)
+The frames are transmitted as **electrical or optical signals** over a physical medium such as:
+- Ethernet cables
+- Wi-Fi
+
+---
+
+## Receiving Side: De-encapsulation
+When the email reaches **Person B**, the entire process is **reversed**:
+
+- Signals are converted back into frames and data
+- Headers are removed layer by layer
+- The email is **decrypted** and **displayed** in Person B's email client
 
 ---
 
