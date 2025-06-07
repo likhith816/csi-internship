@@ -30,8 +30,6 @@ This repository includes the required research and documentation as part of the 
    - Working mechanism (e.g., 3-way handshake for TCP)  
    - Advantages, disadvantages, and use cases  
    - Tabular comparison and real-world examples
-
-4. 📙 **R&D Document on HTTP, HTTPS & ICMP**  
    - How HTTP and HTTPS function (Request-Response, SSL/TLS)  
    - Use cases and differences  
    - ICMP protocol usage in network diagnostics (ping, traceroute)
@@ -45,7 +43,6 @@ csi-internship-main/
 ├── OSI_Model_RnD.md
 ├── TCP_IP_Model_RnD.md
 ├── TCP_UDP_Comparison.md
-├── HTTP_HTTPS_ICMP_RnD.md
 ├── README.md
 ```
 
@@ -58,8 +55,8 @@ csi-internship-main/
 You can view all documents directly on GitHub or clone the repo:
 
 ```bash
-git clone https://github.com/<your-username>/csi-internship-main.git
-cd csi-internship-main
+git clone https://github.com/likhith816/csi-internship.git
+cd csi-internship
 ```
 
 Then open any `.md` file using a Markdown viewer or text editor like VS Code.
@@ -70,8 +67,7 @@ Then open any `.md` file using a Markdown viewer or text editor like VS Code.
 
 If you have any questions about this repository or need clarification:
 
-- **Email:** [your-email@example.com]
-- **LinkedIn:** [linkedin.com/in/likhithsai] *(if available)*
+- **Email:** [likhithsaiparepalli@gmail.com]
 
 ---
 
