@@ -10,6 +10,7 @@ TCP/IP enables interoperability between diverse systems over various network typ
 
 The main condition of this process is to make data reliable and accurate so that the receiver will receive the same information which is sent by the sender. To ensure that, each message reaches its final destination accurately, the TCP/IP model divides its data into packets and combines them at the other end, which helps in maintaining the accuracy of the data while transferring from one end to another end.
 
+![Diagram](image/tcp_ip-2.jpg)
 ---
 
 ## Layers of TCP/IP Model
@@ -21,6 +22,7 @@ It’s composed of four interconnected layers compared to the seven layers in th
 - Network/Internet Layer (IP)  
 - Network Access Layer  
 
+![Diagram](OSI-vs-TCP-vs-Hybrid-2.jpg)
 ---
 
 ## 1. Application Layer
@@ -95,6 +97,7 @@ This layer is the lowest layer in the model and responsible for the physical con
    - Converts packets into frames, adds MAC addresses.  
    - Sends data as binary over the physical medium (Ethernet, Wi-Fi).  
 
+![Diagram](image/tcp_ip-1.jpg)
 ---
 
 ### When Receiving Data (At the Destination)
